@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_796ebdd20f5f9731e3ee376f82832774 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_796ebdd20f5f9731e3ee376f82832774" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_796ebdd20f5f9731e3ee376f82832774 = L.map(
+                "map_796ebdd20f5f9731e3ee376f82832774",
+                {
+                    center: [13.082, 80.27],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_97b2f5c1bb8fcc5a6932243ce0e601c1 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_97b2f5c1bb8fcc5a6932243ce0e601c1.addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+            var circle_marker_723cbc8274d648b09629dda4ab2d2f33 = L.circleMarker(
+                [13.001, 80.257],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+        var popup_e242b352945f10d8f2fbf64514b1f4b9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_72bc3ff7f5a7525c1ab4d7ca988b3908 = $(`<div id="html_72bc3ff7f5a7525c1ab4d7ca988b3908" style="width: 100.0%; height: 100.0%;">         <b>Adyar</b><br>         GW Level: 28.90 m<br>         Risk: <span style='color:#e74c3c'><b>High</b></span><br>         Rainfall: 69.6 mm<br>         Urban Frac: 0.55         </div>`)[0];
+                popup_e242b352945f10d8f2fbf64514b1f4b9.setContent(html_72bc3ff7f5a7525c1ab4d7ca988b3908);
+            
+        
+
+        circle_marker_723cbc8274d648b09629dda4ab2d2f33.bindPopup(popup_e242b352945f10d8f2fbf64514b1f4b9)
+        ;
+
+        
+    
+    
+            circle_marker_723cbc8274d648b09629dda4ab2d2f33.bindTooltip(
+                `<div>
+                     Adyar (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_105b9a44490fc73bdaaa905b88adb960 = L.circleMarker(
+                [13.085, 80.209],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+        var popup_9b6df50231205116cc7427c0046d7d44 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5ec9aa3cbcddf9f22486fda5e2d02f05 = $(`<div id="html_5ec9aa3cbcddf9f22486fda5e2d02f05" style="width: 100.0%; height: 100.0%;">         <b>Anna Nagar</b><br>         GW Level: 22.34 m<br>         Risk: <span style='color:#e74c3c'><b>High</b></span><br>         Rainfall: 69.4 mm<br>         Urban Frac: 0.61         </div>`)[0];
+                popup_9b6df50231205116cc7427c0046d7d44.setContent(html_5ec9aa3cbcddf9f22486fda5e2d02f05);
+            
+        
+
+        circle_marker_105b9a44490fc73bdaaa905b88adb960.bindPopup(popup_9b6df50231205116cc7427c0046d7d44)
+        ;
+
+        
+    
+    
+            circle_marker_105b9a44490fc73bdaaa905b88adb960.bindTooltip(
+                `<div>
+                     Anna Nagar (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b4ecf56ec498cb91fb19f4a1665fbf42 = L.circleMarker(
+                [13.115, 80.098],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+        var popup_abeb25753a33948f74674d56b74e3482 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c07e4fe80873f51014d0cb81ae9e8c7a = $(`<div id="html_c07e4fe80873f51014d0cb81ae9e8c7a" style="width: 100.0%; height: 100.0%;">         <b>Avadi</b><br>         GW Level: 34.94 m<br>         Risk: <span style='color:#e74c3c'><b>High</b></span><br>         Rainfall: 83.1 mm<br>         Urban Frac: 0.87         </div>`)[0];
+                popup_abeb25753a33948f74674d56b74e3482.setContent(html_c07e4fe80873f51014d0cb81ae9e8c7a);
+            
+        
+
+        circle_marker_b4ecf56ec498cb91fb19f4a1665fbf42.bindPopup(popup_abeb25753a33948f74674d56b74e3482)
+        ;
+
+        
+    
+    
+            circle_marker_b4ecf56ec498cb91fb19f4a1665fbf42.bindTooltip(
+                `<div>
+                     Avadi (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5ca956f00bae97d90bee3671058c244b = L.circleMarker(
+                [12.952, 80.143],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+        var popup_33424ae2667ce86462e67bf16948c770 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2e5948090dd3b92997f728309e2ecdd1 = $(`<div id="html_2e5948090dd3b92997f728309e2ecdd1" style="width: 100.0%; height: 100.0%;">         <b>Chromepet</b><br>         GW Level: 32.37 m<br>         Risk: <span style='color:#e74c3c'><b>High</b></span><br>         Rainfall: 90.3 mm<br>         Urban Frac: 0.68         </div>`)[0];
+                popup_33424ae2667ce86462e67bf16948c770.setContent(html_2e5948090dd3b92997f728309e2ecdd1);
+            
+        
+
+        circle_marker_5ca956f00bae97d90bee3671058c244b.bindPopup(popup_33424ae2667ce86462e67bf16948c770)
+        ;
+
+        
+    
+    
+            circle_marker_5ca956f00bae97d90bee3671058c244b.bindTooltip(
+                `<div>
+                     Chromepet (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6127cc3be241302b5537f9a593f75d77 = L.circleMarker(
+                [13.165, 80.263],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+        var popup_d7c418896b20e63f38f894e437c6080a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_05b6069bd8a8c06174283771ad9b8512 = $(`<div id="html_05b6069bd8a8c06174283771ad9b8512" style="width: 100.0%; height: 100.0%;">         <b>Manali</b><br>         GW Level: 34.90 m<br>         Risk: <span style='color:#e74c3c'><b>High</b></span><br>         Rainfall: 103.7 mm<br>         Urban Frac: 0.48         </div>`)[0];
+                popup_d7c418896b20e63f38f894e437c6080a.setContent(html_05b6069bd8a8c06174283771ad9b8512);
+            
+        
+
+        circle_marker_6127cc3be241302b5537f9a593f75d77.bindPopup(popup_d7c418896b20e63f38f894e437c6080a)
+        ;
+
+        
+    
+    
+            circle_marker_6127cc3be241302b5537f9a593f75d77.bindTooltip(
+                `<div>
+                     Manali (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_668102da216c3b1ab8ff041d363562ff = L.circleMarker(
+                [13.117, 80.233],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+        var popup_58821c93b68cbde247183ce8eb2769d9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fad2c49b9200fdf0497e226e87418e9e = $(`<div id="html_fad2c49b9200fdf0497e226e87418e9e" style="width: 100.0%; height: 100.0%;">         <b>Perambur</b><br>         GW Level: 34.56 m<br>         Risk: <span style='color:#e74c3c'><b>High</b></span><br>         Rainfall: 94.2 mm<br>         Urban Frac: 0.43         </div>`)[0];
+                popup_58821c93b68cbde247183ce8eb2769d9.setContent(html_fad2c49b9200fdf0497e226e87418e9e);
+            
+        
+
+        circle_marker_668102da216c3b1ab8ff041d363562ff.bindPopup(popup_58821c93b68cbde247183ce8eb2769d9)
+        ;
+
+        
+    
+    
+            circle_marker_668102da216c3b1ab8ff041d363562ff.bindTooltip(
+                `<div>
+                     Perambur (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b241960f976ba2dff20e645d10a72a40 = L.circleMarker(
+                [13.035, 80.157],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+        var popup_cb57974665efae9642b2f9f88b43fe73 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c3aa922df1a0d217869178a71a1d43d0 = $(`<div id="html_c3aa922df1a0d217869178a71a1d43d0" style="width: 100.0%; height: 100.0%;">         <b>Porur</b><br>         GW Level: 28.21 m<br>         Risk: <span style='color:#e74c3c'><b>High</b></span><br>         Rainfall: 96.0 mm<br>         Urban Frac: 0.59         </div>`)[0];
+                popup_cb57974665efae9642b2f9f88b43fe73.setContent(html_c3aa922df1a0d217869178a71a1d43d0);
+            
+        
+
+        circle_marker_b241960f976ba2dff20e645d10a72a40.bindPopup(popup_cb57974665efae9642b2f9f88b43fe73)
+        ;
+
+        
+    
+    
+            circle_marker_b241960f976ba2dff20e645d10a72a40.bindTooltip(
+                `<div>
+                     Porur (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3aa732bbd515fe18103a9b42ea646870 = L.circleMarker(
+                [12.901, 80.228],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+        var popup_cf7f64c92ae9d474fc0b857430f3fb07 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_39d980dc47031f5b31d363d376d7d64c = $(`<div id="html_39d980dc47031f5b31d363d376d7d64c" style="width: 100.0%; height: 100.0%;">         <b>Sholinganallur</b><br>         GW Level: 16.61 m<br>         Risk: <span style='color:#f39c12'><b>Medium</b></span><br>         Rainfall: 115.7 mm<br>         Urban Frac: 0.76         </div>`)[0];
+                popup_cf7f64c92ae9d474fc0b857430f3fb07.setContent(html_39d980dc47031f5b31d363d376d7d64c);
+            
+        
+
+        circle_marker_3aa732bbd515fe18103a9b42ea646870.bindPopup(popup_cf7f64c92ae9d474fc0b857430f3fb07)
+        ;
+
+        
+    
+    
+            circle_marker_3aa732bbd515fe18103a9b42ea646870.bindTooltip(
+                `<div>
+                     Sholinganallur (Medium)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe88a39871c00cf2e22d2f94b6478ecd = L.circleMarker(
+                [12.924, 80.127],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+        var popup_42ab379f3732ec739a11877ec97f8e84 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0e3dd575f807444df1aa390a4acba2a2 = $(`<div id="html_0e3dd575f807444df1aa390a4acba2a2" style="width: 100.0%; height: 100.0%;">         <b>Tambaram</b><br>         GW Level: 34.94 m<br>         Risk: <span style='color:#e74c3c'><b>High</b></span><br>         Rainfall: 57.5 mm<br>         Urban Frac: 0.58         </div>`)[0];
+                popup_42ab379f3732ec739a11877ec97f8e84.setContent(html_0e3dd575f807444df1aa390a4acba2a2);
+            
+        
+
+        circle_marker_fe88a39871c00cf2e22d2f94b6478ecd.bindPopup(popup_42ab379f3732ec739a11877ec97f8e84)
+        ;
+
+        
+    
+    
+            circle_marker_fe88a39871c00cf2e22d2f94b6478ecd.bindTooltip(
+                `<div>
+                     Tambaram (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6bb9433035d3fce1141edbb760868379 = L.circleMarker(
+                [12.978, 80.22],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+        var popup_b5a0af9e8779349901535644ecfa6977 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f3ca6ba1fcf4125ac0503cc6d2efcf58 = $(`<div id="html_f3ca6ba1fcf4125ac0503cc6d2efcf58" style="width: 100.0%; height: 100.0%;">         <b>Velachery</b><br>         GW Level: 28.79 m<br>         Risk: <span style='color:#e74c3c'><b>High</b></span><br>         Rainfall: 64.7 mm<br>         Urban Frac: 0.82         </div>`)[0];
+                popup_b5a0af9e8779349901535644ecfa6977.setContent(html_f3ca6ba1fcf4125ac0503cc6d2efcf58);
+            
+        
+
+        circle_marker_6bb9433035d3fce1141edbb760868379.bindPopup(popup_b5a0af9e8779349901535644ecfa6977)
+        ;
+
+        
+    
+    
+            circle_marker_6bb9433035d3fce1141edbb760868379.bindTooltip(
+                `<div>
+                     Velachery (High)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var heat_map_dc32ac2bbc9b35b5cf9f388872d5c866 = L.heatLayer(
+                [[13.001, 80.257, 0.8270180551216592], [13.085, 80.209, 0.6393053631175669], [13.115, 80.098, 0.9997519835355225], [12.952, 80.143, 0.9263653425608176], [13.165, 80.263, 0.9986096769347073], [13.117, 80.233, 0.9888726459302645], [13.035, 80.157, 0.8073627503118092], [12.901, 80.228, 0.4752186241286633], [12.924, 80.127, 1.0], [12.978, 80.22, 0.8239345427315675]],
+                {
+  "minOpacity": 0.3,
+  "maxZoom": 18,
+  "radius": 40,
+  "blur": 25,
+}
+            );
+        
+    
+            heat_map_dc32ac2bbc9b35b5cf9f388872d5c866.addTo(map_796ebdd20f5f9731e3ee376f82832774);
+        
+    
+            var layer_control_6cee676d7cd245e7d2da2f19785ceb3e_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_97b2f5c1bb8fcc5a6932243ce0e601c1,
+                },
+                overlays :  {
+                    "GW Depletion Heatmap" : heat_map_dc32ac2bbc9b35b5cf9f388872d5c866,
+                },
+            };
+            let layer_control_6cee676d7cd245e7d2da2f19785ceb3e = L.control.layers(
+                layer_control_6cee676d7cd245e7d2da2f19785ceb3e_layers.base_layers,
+                layer_control_6cee676d7cd245e7d2da2f19785ceb3e_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_796ebdd20f5f9731e3ee376f82832774);
+
+        
+</script>
+</html>

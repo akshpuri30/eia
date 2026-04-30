@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/pip install *)",
+      "Bash(.venv/bin/python data/generate_dataset.py)",
+      "Bash(.venv/bin/python models/train_ml.py)",
+      "Bash(.venv/bin/python models/train_arima.py)",
+      "Bash(.venv/bin/python models/train_risk_classifier.py)",
+      "Bash(.venv/bin/python -c ' *)",
+      "Bash(grep -v \"^$\")",
+      "Bash(grep -v \"^\\\\s*$\")",
+      "Bash(.venv/bin/python models/advanced_modules.py)",
+      "Bash(grep -v \"UserWarning\\\\|warn\\(\\\\|site-packages\\\\|^\\\\s*$\")",
+      "Bash(.venv/bin/python gis/spatial_analysis.py)",
+      "Bash(.venv/bin/streamlit run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8501)",
+      "Bash(.venv/bin/python models/train_lstm.py --model LSTM)",
+      "Bash(.venv/bin/python models/train_lstm.py --model GRU)",
+      "Bash(pkill -f \"streamlit run\")",
+      "Bash(npm list *)",
+      "Bash(npm install *)",
+      "Bash(node make_ppt.js)",
+      "Bash(python '/Users/akshpuri/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/87dce09f-224e-4970-bb48-924140d60d2e/20bdb6d2-07fd-4053-aed9-630aef8b4e0a/skills/pptx/scripts/office/soffice.py' --headless --convert-to pdf /Users/akshpuri/Desktop/final/Chennai_Groundwater_AI.pptx)",
+      "Bash(python3 '/Users/akshpuri/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/87dce09f-224e-4970-bb48-924140d60d2e/20bdb6d2-07fd-4053-aed9-630aef8b4e0a/skills/pptx/scripts/office/soffice.py' --headless --convert-to pdf /Users/akshpuri/Desktop/final/Chennai_Groundwater_AI.pptx)",
+      "Bash(.venv/bin/python -m markitdown /Users/akshpuri/Desktop/final/Chennai_Groundwater_AI.pptx)",
+      "Bash(grep -iE \"\\\\bx{3,}\\\\b|lorem|ipsum|\\\\bTODO|\\\\[insert|this.*\\(page|slide\\).*layout\")",
+      "Bash(node -e ' *)",
+      "Bash(cat)",
+      "Bash(node /tmp/final_audit.js)",
+      "Bash(open http://localhost:8501)"
+    ]
+  }
+}
